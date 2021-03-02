@@ -538,6 +538,7 @@
             background-color: var(--white);
             transition: all 0.4s ease-in-out;
             margin-bottom: 30px;
+            cursor: pointer;
         }
         
         .col-md-6:nth-child(5) .sub-item,
@@ -561,11 +562,12 @@
         .item-content {
             display: block;
             overflow: hidden;
-            padding: 35px 18px 35px 20px;
+            padding: 25px 18px 25px 20px;
+            transition: all 0.4s ease-in-out;
         }
         
-        .omraa .col-md-6:nth-child(1) .sub-item .item-content {
-            padding: 35px 18px 25px 20px;
+        html[dir=ltr] .item-content {
+            padding: 20px 18px 20px 20px;
         }
         
         .item-content .item-name {
@@ -577,20 +579,16 @@
             text-overflow: ellipsis;
             text-decoration: none;
             display: inherit;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
             transition: all 0.4s ease-in-out;
         }
         
-        html[dir=ltr] .item-name {
-            margin-bottom: 15px;
+        .item-content .item-name {
+            margin-bottom: 10px;
         }
         
         .item-content .item-name:hover {
             color: var(--hover);
-        }
-        
-        .omraa .col-md-6:nth-child(1) .sub-item .item-name {
-            margin-bottom: 70px;
         }
         
         .item-desc {
@@ -599,11 +597,11 @@
             font-weight: 400;
             line-height: 1.8;
             color: #757575;
-            margin-bottom: 35px;
+            margin-bottom: 10px;
+            transition: all 0.4s ease-in-out;
         }
         
         html[dir=ltr] .item-desc {
-            margin-bottom: 25px;
             font-size: 13px;
         }
         
@@ -611,10 +609,7 @@
             display: flex;
             flex-wrap: row;
             align-items: center;
-        }
-        
-        .omraa .col-md-6:nth-child(1) .sub-item .price-box {
-            margin-bottom: 30px;
+            margin-bottom: 10px;
         }
         
         .last-price {
@@ -646,6 +641,8 @@
             font-size: 15px;
             font-weight: 500;
             transition: all 0.4s ease-in-out;
+            visibility: hidden;
+            opacity: 0;
         }
         
         .add-to-cart .cart-icon {
@@ -675,6 +672,16 @@
         .omraa-hajj .more:hover {
             background-color: var(--main);
             color: var(--white);
+        }
+        
+        .sub-item:hover .item-content .add-to-cart {
+            visibility: visible;
+            opacity: 1;
+        }
+        
+        .sub-item:hover .item-desc {
+            visibility: hidden;
+            opacity: 0;
         }
         /***************************** Banner Section Start ***************************/
         
@@ -1389,20 +1396,11 @@
             .item-img {
                 width: 100%;
             }
-            .omraa .col-md-6:nth-child(1) .sub-item .item-content {
-                padding: 20px;
-            }
             .item-content {
                 padding: 20px;
             }
-            .omraa .col-md-6:nth-child(1) .sub-item .item-name {
-                margin-bottom: 10px;
-            }
             .item-content .item-name {
                 margin-bottom: 10px;
-            }
-            .omraa .col-md-6:nth-child(1) .sub-item .price-box {
-                margin-bottom: 0;
             }
             .item-content .add-to-cart {
                 margin-top: 10px;
@@ -1600,18 +1598,18 @@
                 padding: 60px 0 180px 0;
             }
             .item-content {
-                padding: 30px 18px 30px 20px;
+                padding: 15px 18px 15px 20px;
             }
-            html[dir=ltr] .item-content {
+            /* html[dir=ltr] .item-content {
                 padding: 25px 18px 25px 20px;
-            }
+            } */
             .item-content .item-name {
                 margin-bottom: 10px;
             }
             .item-desc {
                 overflow: auto;
-                max-height: 80px;
-                margin-bottom: 15px;
+                max-height: 60px;
+                /* margin-bottom: 15px; */
             }
             .price-box {
                 flex-direction: column;
