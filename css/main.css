@@ -562,12 +562,15 @@
         .item-content {
             display: block;
             overflow: hidden;
-            padding: 25px 18px 25px 20px;
+            /*new*/
+            /* padding: 25px 18px 25px 20px; */
+            padding: 35px 18px 35px 20px;
             transition: all 0.4s ease-in-out;
         }
         
         html[dir=ltr] .item-content {
-            padding: 20px 18px 20px 20px;
+            /*new*/
+            padding: 25px 18px 25px 20px;
         }
         
         .item-content .item-name {
@@ -583,10 +586,6 @@
             transition: all 0.4s ease-in-out;
         }
         
-        .item-content .item-name {
-            margin-bottom: 10px;
-        }
-        
         .item-content .item-name:hover {
             color: var(--hover);
         }
@@ -597,7 +596,9 @@
             font-weight: 400;
             line-height: 1.8;
             color: #757575;
-            margin-bottom: 10px;
+            /*new*/
+            /* margin-bottom: 10px; */
+            margin-bottom: 30px;
             transition: all 0.4s ease-in-out;
         }
         
@@ -641,8 +642,10 @@
             font-size: 15px;
             font-weight: 500;
             transition: all 0.4s ease-in-out;
-            visibility: hidden;
-            opacity: 0;
+            /*new*/
+            /* visibility: hidden;
+            opacity: 0; */
+            display: none;
         }
         
         .add-to-cart .cart-icon {
@@ -673,15 +676,29 @@
             background-color: var(--main);
             color: var(--white);
         }
-        
-        .sub-item:hover .item-content .add-to-cart {
+        /*new*/
+        /* .sub-item:hover .item-content .add-to-cart {
             visibility: visible;
             opacity: 1;
-        }
+        } */
+        /*new*/
         
         .sub-item:hover .item-desc {
-            visibility: hidden;
-            opacity: 0;
+            display: none;
+        }
+        /*new*/
+        
+        .sub-item:hover .add-to-cart {
+            display: flex;
+        }
+        /*new*/
+        
+        .sub-item:hover .item-content {
+            padding: 25px 18px 25px 20px;
+        }
+        
+        html[dir=ltr] .sub-item:hover .item-content {
+            padding: 20px 18px 20px 20px;
         }
         /***************************** Banner Section Start ***************************/
         
